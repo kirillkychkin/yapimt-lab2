@@ -20,5 +20,27 @@ namespace lab2
         {
             Application.Exit();
         }
+
+        private void copiesBtn_Click(object sender, EventArgs e)
+        {
+            string src = copiesSource.Text;
+            string strb = "";
+            int lenght = TestInput.TestInt32(copiesNum.Text);
+
+            StringMethods.Copies(src, ref strb, lenght);
+
+            copiesResult.Text = strb;
+        }
+
+        private void wordsBtn_Click(object sender, EventArgs e)
+        {
+            string str = wordsSource.Text;
+            wordsRes.Text = StringMethods.Words(str).ToString();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }
