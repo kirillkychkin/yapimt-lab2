@@ -97,14 +97,27 @@
             findwordsSrc = new TextBox();
             label23 = new Label();
             tabPage9 = new TabPage();
-            tabPage10 = new TabPage();
-            label26 = new Label();
-            overlayBase = new TextBox();
-            label27 = new Label();
-            overlayOverlay = new TextBox();
-            overlayBtn = new Button();
-            label28 = new Label();
+            overlayStartPos = new TextBox();
+            label29 = new Label();
             overlayRes = new TextBox();
+            label28 = new Label();
+            overlayBtn = new Button();
+            overlayOverlay = new TextBox();
+            label27 = new Label();
+            overlayBase = new TextBox();
+            label26 = new Label();
+            tabPage10 = new TabPage();
+            label30 = new Label();
+            strSetBase = new TextBox();
+            label31 = new Label();
+            strSetSymbol = new TextBox();
+            label32 = new Label();
+            strSetStartPos = new TextBox();
+            label33 = new Label();
+            strSetLength = new TextBox();
+            strSetBtn = new Button();
+            label34 = new Label();
+            strSetRes = new TextBox();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -116,6 +129,7 @@
             tabPage7.SuspendLayout();
             tabPage8.SuspendLayout();
             tabPage9.SuspendLayout();
+            tabPage10.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -131,13 +145,13 @@
             // 
             выходToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { выходИзПрограммыToolStripMenuItem });
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(54, 20);
+            выходToolStripMenuItem.Size = new Size(53, 20);
             выходToolStripMenuItem.Text = "Выход";
             // 
             // выходИзПрограммыToolStripMenuItem
             // 
             выходИзПрограммыToolStripMenuItem.Name = "выходИзПрограммыToolStripMenuItem";
-            выходИзПрограммыToolStripMenuItem.Size = new Size(193, 22);
+            выходИзПрограммыToolStripMenuItem.Size = new Size(192, 22);
             выходИзПрограммыToolStripMenuItem.Text = "Выход из программы";
             выходИзПрограммыToolStripMenuItem.Click += выходИзПрограммыToolStripMenuItem_Click;
             // 
@@ -169,7 +183,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(3, 21);
             label2.Name = "label2";
-            label2.Size = new Size(100, 15);
+            label2.Size = new Size(99, 15);
             label2.TabIndex = 2;
             label2.Text = "Исходная строка";
             // 
@@ -236,7 +250,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(3, 28);
             label6.Name = "label6";
-            label6.Size = new Size(100, 15);
+            label6.Size = new Size(99, 15);
             label6.TabIndex = 10;
             label6.Text = "Исходная строка";
             // 
@@ -751,12 +765,14 @@
             label23.AutoSize = true;
             label23.Location = new Point(8, 15);
             label23.Name = "label23";
-            label23.Size = new Size(36, 15);
+            label23.Size = new Size(37, 15);
             label23.TabIndex = 0;
             label23.Text = "Текст";
             // 
             // tabPage9
             // 
+            tabPage9.Controls.Add(overlayStartPos);
+            tabPage9.Controls.Add(label29);
             tabPage9.Controls.Add(overlayRes);
             tabPage9.Controls.Add(label28);
             tabPage9.Controls.Add(overlayBtn);
@@ -771,30 +787,54 @@
             tabPage9.Text = "Overlay";
             tabPage9.UseVisualStyleBackColor = true;
             // 
-            // tabPage10
+            // overlayStartPos
             // 
-            tabPage10.Location = new Point(4, 24);
-            tabPage10.Name = "tabPage10";
-            tabPage10.Size = new Size(792, 395);
-            tabPage10.TabIndex = 9;
-            tabPage10.Text = "StrSet";
-            tabPage10.UseVisualStyleBackColor = true;
+            overlayStartPos.Location = new Point(130, 105);
+            overlayStartPos.Name = "overlayStartPos";
+            overlayStartPos.Size = new Size(564, 23);
+            overlayStartPos.TabIndex = 8;
             // 
-            // label26
+            // label29
             // 
-            label26.AutoSize = true;
-            label26.Location = new Point(8, 18);
-            label26.Name = "label26";
-            label26.Size = new Size(95, 15);
-            label26.TabIndex = 0;
-            label26.Text = "Исходный текст";
+            label29.AutoSize = true;
+            label29.Location = new Point(8, 105);
+            label29.Name = "label29";
+            label29.Size = new Size(105, 15);
+            label29.TabIndex = 7;
+            label29.Text = "Начать с позиции";
             // 
-            // overlayBase
+            // overlayRes
             // 
-            overlayBase.Location = new Point(130, 15);
-            overlayBase.Name = "overlayBase";
-            overlayBase.Size = new Size(564, 23);
-            overlayBase.TabIndex = 1;
+            overlayRes.Location = new Point(130, 179);
+            overlayRes.Name = "overlayRes";
+            overlayRes.Size = new Size(564, 23);
+            overlayRes.TabIndex = 6;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(8, 187);
+            label28.Name = "label28";
+            label28.Size = new Size(60, 15);
+            label28.TabIndex = 5;
+            label28.Text = "Результат";
+            // 
+            // overlayBtn
+            // 
+            overlayBtn.Location = new Point(8, 144);
+            overlayBtn.Name = "overlayBtn";
+            overlayBtn.Size = new Size(75, 23);
+            overlayBtn.TabIndex = 4;
+            overlayBtn.Text = "Ok";
+            overlayBtn.UseVisualStyleBackColor = true;
+            overlayBtn.Click += overlayBtn_Click;
+            // 
+            // overlayOverlay
+            // 
+            overlayOverlay.Location = new Point(130, 52);
+            overlayOverlay.Name = "overlayOverlay";
+            overlayOverlay.Size = new Size(564, 23);
+            overlayOverlay.TabIndex = 3;
             // 
             // label27
             // 
@@ -805,38 +845,131 @@
             label27.TabIndex = 2;
             label27.Text = "Перекрыть строкой";
             // 
-            // overlayOverlay
+            // overlayBase
             // 
-            overlayOverlay.Location = new Point(130, 52);
-            overlayOverlay.Name = "overlayOverlay";
-            overlayOverlay.Size = new Size(564, 23);
-            overlayOverlay.TabIndex = 3;
+            overlayBase.Location = new Point(130, 15);
+            overlayBase.Name = "overlayBase";
+            overlayBase.Size = new Size(564, 23);
+            overlayBase.TabIndex = 1;
             // 
-            // overlayBtn
+            // label26
             // 
-            overlayBtn.Location = new Point(8, 87);
-            overlayBtn.Name = "overlayBtn";
-            overlayBtn.Size = new Size(75, 23);
-            overlayBtn.TabIndex = 4;
-            overlayBtn.Text = "Ok";
-            overlayBtn.UseVisualStyleBackColor = true;
-            overlayBtn.Click += overlayBtn_Click;
+            label26.AutoSize = true;
+            label26.Location = new Point(8, 18);
+            label26.Name = "label26";
+            label26.Size = new Size(94, 15);
+            label26.TabIndex = 0;
+            label26.Text = "Исходный текст";
             // 
-            // label28
+            // tabPage10
             // 
-            label28.AutoSize = true;
-            label28.Location = new Point(8, 125);
-            label28.Name = "label28";
-            label28.Size = new Size(60, 15);
-            label28.TabIndex = 5;
-            label28.Text = "Результат";
+            tabPage10.Controls.Add(strSetRes);
+            tabPage10.Controls.Add(label34);
+            tabPage10.Controls.Add(strSetBtn);
+            tabPage10.Controls.Add(strSetLength);
+            tabPage10.Controls.Add(label33);
+            tabPage10.Controls.Add(strSetStartPos);
+            tabPage10.Controls.Add(label32);
+            tabPage10.Controls.Add(strSetSymbol);
+            tabPage10.Controls.Add(label31);
+            tabPage10.Controls.Add(strSetBase);
+            tabPage10.Controls.Add(label30);
+            tabPage10.Location = new Point(4, 24);
+            tabPage10.Name = "tabPage10";
+            tabPage10.Size = new Size(792, 395);
+            tabPage10.TabIndex = 9;
+            tabPage10.Text = "StrSet";
+            tabPage10.UseVisualStyleBackColor = true;
             // 
-            // overlayRes
+            // label30
             // 
-            overlayRes.Location = new Point(130, 122);
-            overlayRes.Name = "overlayRes";
-            overlayRes.Size = new Size(564, 23);
-            overlayRes.TabIndex = 6;
+            label30.AutoSize = true;
+            label30.Location = new Point(8, 20);
+            label30.Name = "label30";
+            label30.Size = new Size(64, 15);
+            label30.TabIndex = 0;
+            label30.Text = "Base string";
+            // 
+            // strSetBase
+            // 
+            strSetBase.Location = new Point(130, 17);
+            strSetBase.Name = "strSetBase";
+            strSetBase.Size = new Size(584, 23);
+            strSetBase.TabIndex = 1;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Location = new Point(8, 69);
+            label31.Name = "label31";
+            label31.Size = new Size(78, 15);
+            label31.TabIndex = 2;
+            label31.Text = "Insert symbol";
+            // 
+            // strSetSymbol
+            // 
+            strSetSymbol.Location = new Point(130, 66);
+            strSetSymbol.Name = "strSetSymbol";
+            strSetSymbol.Size = new Size(584, 23);
+            strSetSymbol.TabIndex = 3;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(8, 124);
+            label32.Name = "label32";
+            label32.Size = new Size(53, 15);
+            label32.TabIndex = 4;
+            label32.Text = "Start pos";
+            // 
+            // strSetStartPos
+            // 
+            strSetStartPos.Location = new Point(130, 124);
+            strSetStartPos.Name = "strSetStartPos";
+            strSetStartPos.Size = new Size(584, 23);
+            strSetStartPos.TabIndex = 5;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Location = new Point(8, 175);
+            label33.Name = "label33";
+            label33.Size = new Size(73, 15);
+            label33.TabIndex = 6;
+            label33.Text = "Insert length";
+            // 
+            // strSetLength
+            // 
+            strSetLength.Location = new Point(130, 175);
+            strSetLength.Name = "strSetLength";
+            strSetLength.Size = new Size(584, 23);
+            strSetLength.TabIndex = 7;
+            // 
+            // strSetBtn
+            // 
+            strSetBtn.Location = new Point(11, 217);
+            strSetBtn.Name = "strSetBtn";
+            strSetBtn.Size = new Size(75, 23);
+            strSetBtn.TabIndex = 8;
+            strSetBtn.Text = "Ok";
+            strSetBtn.UseVisualStyleBackColor = true;
+            strSetBtn.Click += strSetBtn_Click;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(8, 265);
+            label34.Name = "label34";
+            label34.Size = new Size(39, 15);
+            label34.TabIndex = 9;
+            label34.Text = "Result";
+            // 
+            // strSetRes
+            // 
+            strSetRes.Location = new Point(130, 257);
+            strSetRes.Name = "strSetRes";
+            strSetRes.Size = new Size(584, 23);
+            strSetRes.TabIndex = 10;
             // 
             // Form1
             // 
@@ -869,6 +1002,8 @@
             tabPage8.PerformLayout();
             tabPage9.ResumeLayout(false);
             tabPage9.PerformLayout();
+            tabPage10.ResumeLayout(false);
+            tabPage10.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -952,5 +1087,18 @@
         private Label label28;
         private Button overlayBtn;
         private TextBox overlayRes;
+        private TextBox overlayStartPos;
+        private Label label29;
+        private Label label32;
+        private TextBox strSetSymbol;
+        private Label label31;
+        private TextBox strSetBase;
+        private Label label30;
+        private TextBox strSetRes;
+        private Label label34;
+        private Button strSetBtn;
+        private TextBox strSetLength;
+        private Label label33;
+        private TextBox strSetStartPos;
     }
 }

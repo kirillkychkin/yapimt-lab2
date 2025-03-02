@@ -109,6 +109,26 @@ namespace lab2
         private void overlayBtn_Click(object sender, EventArgs e)
         {
 
+            string str = overlayBase.Text;
+            string strOverlay = overlayOverlay.Text;
+            int pos = TestInput.TestInt32(overlayStartPos.Text);
+
+            StringMethods.Overlay(ref str, strOverlay, pos);
+
+            overlayRes.Text = str;
+        }
+
+        private void strSetBtn_Click(object sender, EventArgs e)
+        {
+
+            string str = strSetBase.Text;
+            int pos = TestInput.TestInt32(strSetStartPos.Text);
+            int length = TestInput.TestInt32(strSetLength.Text);
+            char symbol = strSetSymbol.Text.ToCharArray()[0];
+
+            StringMethods.StrSet(ref str, pos, length, symbol);
+
+            strSetRes.Text = str;
         }
     }
 }
