@@ -66,8 +66,8 @@ namespace lab2
         private void wordBtn_Click(object sender, EventArgs e)
         {
             string str = wordStr.Text;
-            StringMethods.Word(str);
-            wordsRes.Text = str;
+            string word = StringMethods.Word(str);
+            wordRes.Text = word;
         }
 
         private void compulBtn_Click(object sender, EventArgs e)
